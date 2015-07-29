@@ -1,0 +1,24 @@
+{
+  "name": "node-http",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha test/unit --recursive",
+    "test-integration": "mocha test/integration --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GregDick/node-http.git"
+  },
+  "author": "Greg Dick",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GregDick/node-http/issues"
+  },
+  "homepage": "https://github.com/GregDick/node-http#readme",
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "mocha": "^2.2.5"
+  }
+}
