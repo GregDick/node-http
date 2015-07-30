@@ -1,6 +1,6 @@
 var chalk = require('chalk');
+var port = process.env.PORT || 1337;
+require('./lib/server')(port);
 
-require('./lib/server')(1337);
 
-
-console.log('Server running on ' + chalk.bgMagenta('http://localhost:1337'));
+console.log('Server running on ' + chalk.bgMagenta('http://localhost:' + port));
