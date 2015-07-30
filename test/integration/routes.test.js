@@ -10,8 +10,11 @@ describe('routes', function(){
     require(path.join(process.cwd(), '/lib/server'))(port);
   });
 
-  //test the cal route
+  //test the cal route at the current date
   it('should respond to the /cal route', function(done){
+    var MONTH_NAMES = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    var now = new Date();
+    var month = MONTH_NAMES[now.getMonth()];
     http.get('http://localhost:' + port + '/cal', function(res){
       var body = '';
 
@@ -22,7 +25,7 @@ describe('routes', function(){
         body += chunk;
       })
       .on('end', function(){
-        expect(body).to.contain('1');
+        expect(body).to.contain(month);
         done();
       })
     })
